@@ -52,8 +52,18 @@ header .contact-info a {
 
 /* Main Content Section */
 main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
     background-color: #fff;
     padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Left Column */
+.main-left {
+    width: 48%;
 }
 
 h2 {
@@ -63,7 +73,7 @@ h2 {
 }
 
 .section {
-    margin: 30px 0;
+    margin-bottom: 30px;
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 8px;
@@ -78,6 +88,17 @@ ul li {
     margin-bottom: 10px;
 }
 
+/* Right Column */
+.main-right {
+    width: 48%;
+}
+
+.main-right h2 {
+    font-size: 1.8em;
+    color: #2a2a72;
+    margin-bottom: 10px;
+}
+
 /* Footer */
 footer {
     background-color: #2a2a72;
@@ -89,4 +110,15 @@ footer {
 footer p {
     font-size: 1em;
     margin: 0;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .main-left, .main-right {
+        width: 100%;
+    }
+    
+    main {
+        padding: 10px 0;
+    }
 }
